@@ -14,6 +14,21 @@
   src: url(../assets/font/Nunito-Bold.ttf);
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px !important;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ef6f21;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
 html,
 body {
   margin: 0;
@@ -107,12 +122,12 @@ main .intro .intro__text h1 {
   font-family: bwod-light;
   font-weight: 700;
   font-size: 4rem;
+  line-height: 4.5rem;
 }
 
 main .intro .intro__text p {
   padding: 2rem 0;
   font-size: 1.5rem;
-  font-weight: bold;
 }
 
 main .intro .intro__button {
@@ -171,6 +186,44 @@ main .service__holder--content:not(:last-child) {
   margin-bottom: 2rem;
 }
 
+main .hack {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  background-color: #F7F8F8;
+  padding-top: 3rem 0;
+}
+
+main .hack .hack__text {
+  margin-top: 2rem;
+}
+
+main .hack .hack__text h1 {
+  font-family: bwod-light;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  padding-top: 2rem;
+  line-height: 4.5rem;
+}
+
+main .hack .hack__text p {
+  padding: 2rem 0;
+  font-size: 1.2rem;
+}
+
+main .hack .hack__button {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+main .hack .hack__image img {
+  width: 100%;
+  height: auto;
+}
+
 main .promise {
   margin-bottom: 5rem;
   -webkit-box-pack: justify;
@@ -180,6 +233,7 @@ main .promise {
 
 main .promise__heading {
   text-align: center;
+  padding-top: 2rem;
 }
 
 main .promise__heading h1 {
@@ -212,12 +266,12 @@ main .team {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #f3f3f3;
+  background: #F7F8F8;
 }
 
 main .team__heading {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 main .team__heading h1 {
@@ -239,18 +293,14 @@ main .team__holder {
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   grid-gap: 3rem;
-}
-
-main .team__holder img {
-  width: 10%;
-  height: auto;
-  margin: 0 auto;
+  border-radius: 10px;
+  padding-bottom: 5rem;
 }
 
 main .team__holder--content {
   background: #ffffff;
   text-align: center;
-  margin-bottom: 2rem;
+  border-radius: 10px;
 }
 
 main .team__holder--content h2 {
@@ -259,6 +309,49 @@ main .team__holder--content h2 {
 
 main .team__holder--content p {
   font-size: 1.2rem;
+}
+
+main .team__holder--content-circle {
+  width: 100px;
+  height: 100px;
+  background: red;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+main .team__holder--content-circle img {
+  width: 10%;
+  height: auto;
+  margin: 0 auto;
+}
+
+main .clientele {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin: 6rem 0;
+}
+
+main .clientele .clientele__text {
+  margin-top: 2rem;
+}
+
+main .clientele .clientele__text h1 {
+  font-family: bwod-light;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 4.5rem;
+}
+
+main .clientele .clientele__text p {
+  padding: 2rem 0;
+  font-size: 1.2rem;
+}
+
+main .clientele .clientele__image img {
+  width: 100%;
+  height: auto;
 }
 
 .row-sizing {
