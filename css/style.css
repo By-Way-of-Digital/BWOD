@@ -69,9 +69,6 @@ a {
 header {
   display: -ms-grid;
   display: grid;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   padding: 15px;
@@ -84,7 +81,8 @@ header .header__logo img {
 }
 
 header .header__menu {
-  justify-items: end;
+  text-align: right;
+  font-weight: bold;
 }
 
 header .header__menu .header__link {

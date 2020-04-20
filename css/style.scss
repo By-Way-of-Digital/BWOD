@@ -62,7 +62,6 @@ a {
 
 header {
   display: grid;
-  justify-content: space-between;
   grid-template-columns: repeat(2, 1fr);
   padding: 15px;
   background-color: #f2f2f2;
@@ -75,7 +74,8 @@ header {
   }
 
   .header__menu {
-    justify-items: end;
+    text-align: right;
+    font-weight: bold;
     .header__link {
       color: $text-color;
       padding: 0 10px;
