@@ -160,6 +160,42 @@ main {
     }
   }
 
+
+  .promise {
+    margin-bottom: 5rem;
+    justify-content: space-between;
+    &__heading {
+      text-align: center;
+      h1 {
+        font-family: bwod-light;
+        font-weight: 700;
+        font-size: 3rem;
+        margin-bottom: 2.5rem;
+      }
+    }
+
+    &__holder {
+
+      img {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+      }
+
+      &--content {
+        h2 {
+          padding: 1rem 0;
+        }
+        p {
+          font-size: 1.2rem;
+        }
+      }
+      &--content:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
   .team {
     margin-bottom: 5rem;
     justify-content: space-between;
@@ -194,6 +230,7 @@ main {
       &--content {
         background: #ffffff;
         text-align: center;
+        margin-bottom: 2rem;
         h2 {
           padding: 1rem 0;
         }
@@ -201,9 +238,7 @@ main {
           font-size: 1.2rem;
         }
       }
-      &--content:not(:last-child) {
-        margin-bottom: 2rem;
-      }
+      
     }
   }
 }

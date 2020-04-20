@@ -173,6 +173,42 @@ main .service__holder--content:not(:last-child) {
   margin-bottom: 2rem;
 }
 
+main .promise {
+  margin-bottom: 5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .promise__heading {
+  text-align: center;
+}
+
+main .promise__heading h1 {
+  font-family: bwod-light;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+main .promise__holder img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+main .promise__holder--content h2 {
+  padding: 1rem 0;
+}
+
+main .promise__holder--content p {
+  font-size: 1.2rem;
+}
+
+main .promise__holder--content:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
 main .team {
   margin-bottom: 5rem;
   -webkit-box-pack: justify;
@@ -216,6 +252,7 @@ main .team__holder img {
 main .team__holder--content {
   background: #ffffff;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 main .team__holder--content h2 {
@@ -224,10 +261,6 @@ main .team__holder--content h2 {
 
 main .team__holder--content p {
   font-size: 1.2rem;
-}
-
-main .team__holder--content:not(:last-child) {
-  margin-bottom: 2rem;
 }
 
 .row-sizing {
