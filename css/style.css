@@ -1,0 +1,275 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: bwod-light;
+  src: url(../assets/font/Nunito-Light.ttf);
+}
+
+@font-face {
+  font-family: bwod-bold;
+  src: url(../assets/font/Nunito-Bold.ttf);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  padding: 0;
+  margin: 0;
+  color: #4f4b6a;
+  font-family: bwod-light;
+}
+
+.left-underline {
+  position: relative;
+}
+
+.left-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 8%;
+  height: 4px;
+  background-color: #ef6f21;
+  border-radius: 2px;
+}
+
+.middle_underline {
+  position: relative;
+  text-align: center;
+}
+
+.middle_underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 8%;
+  height: 4px;
+  background-color: #ef6f21;
+  border-radius: 2px;
+  left: 40%;
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  padding: 15px;
+  background-color: #f2f2f2;
+}
+
+header .header__logo img {
+  width: 100%;
+  height: auto;
+}
+
+header .header__menu {
+  justify-items: end;
+}
+
+header .header__menu .header__link {
+  color: #4f4b6a;
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+main .intro {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin: 6rem 0;
+}
+
+main .intro .intro__text {
+  margin-top: 2rem;
+}
+
+main .intro .intro__text h1 {
+  font-family: bwod-light;
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+main .intro .intro__text p {
+  padding: 2rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+main .intro .intro__button {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+main .intro .intro__image img {
+  width: 100%;
+  height: auto;
+}
+
+main .service {
+  margin-bottom: 5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .service__heading {
+  text-align: center;
+}
+
+main .service__heading h1 {
+  font-family: bwod-light;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+main .service__holder {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
+  position: relative;
+}
+
+main .service__holder img {
+  width: 10%;
+  height: auto;
+  margin: 0 auto;
+}
+
+main .service__holder--content h2 {
+  padding: 1rem 0;
+}
+
+main .service__holder--content p {
+  font-size: 1.2rem;
+}
+
+main .service__holder--content:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+main .team {
+  margin-bottom: 5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #f3f3f3;
+}
+
+main .team__heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+main .team__heading h1 {
+  font-family: bwod-light;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  padding-top: 3rem;
+}
+
+main .team__heading p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+main .team__holder {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+}
+
+main .team__holder img {
+  width: 10%;
+  height: auto;
+  margin: 0 auto;
+}
+
+main .team__holder--content {
+  background: #ffffff;
+  text-align: center;
+}
+
+main .team__holder--content h2 {
+  padding: 1rem 0;
+}
+
+main .team__holder--content p {
+  font-size: 1.2rem;
+}
+
+main .team__holder--content:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.row-sizing {
+  padding: 0 6rem;
+}
+
+.btn {
+  padding: 12px 25px;
+  border: none;
+  text-align: center;
+  color: #ef6f21;
+  font-family: bwod-light;
+  position: relative;
+  background-color: transparent;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #ef6f21;
+  color: #fff;
+}
+
+.btn::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 97%;
+  height: 15px;
+  border: 2px solid #ef6f21;
+  border-bottom: none;
+}
+
+.btn::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  right: 0;
+  width: 97%;
+  height: 15px;
+  border: 2px solid #ef6f21;
+  border-top: none;
+}
+/*# sourceMappingURL=style.css.map */
