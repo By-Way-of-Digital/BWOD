@@ -1,0 +1,253 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+// Color Variables
+$primary-color: #ef6f21;
+$text-color: #4f4b6a;
+
+// Custom Fonts
+@font-face {
+  font-family: bwod-light;
+  src: url(../assets/font/Nunito-Light.ttf);
+}
+
+@font-face {
+  font-family: bwod-bold;
+  src: url(../assets/font/Nunito-Bold.ttf);
+}
+
+@import "mixins";
+
+// General styles
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  padding: 0;
+  margin: 0;
+  color: $text-color;
+  font-family: bwod-light;
+}
+
+// Customized Heading
+.left-underline {
+  position: relative;
+  &::after {
+    @include custom-underline;
+  }
+}
+
+.middle_underline {
+  position: relative;
+  text-align: center;
+  &::after {
+    @include custom-underline;
+    left: 40%;
+  }
+}
+
+// ===================== Header ============================
+
+header {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 15px;
+  background-color: #f2f2f2;
+
+  .header__logo {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .header__menu {
+    justify-items: end;
+    .header__link {
+      color: $text-color;
+      padding: 0 10px;
+      text-decoration: none;
+    }
+  }
+}
+
+// ===================== main content ========================
+
+main {
+  .intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 6rem 0;
+
+    .intro__text {
+      margin-top: 2rem;
+
+      h1 {
+        font-family: bwod-light;
+        font-weight: 700;
+        font-size: 4rem;
+      }
+      p {
+        padding: 2rem 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    }
+
+    .intro__button {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-top: 1.2rem;
+    }
+
+    .intro__image {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .service {
+    margin-bottom: 5rem;
+    justify-content: space-between;
+    &__heading {
+      text-align: center;
+      h1 {
+        font-family: bwod-light;
+        font-weight: 700;
+        font-size: 3rem;
+        margin-bottom: 2.5rem;
+      }
+    }
+
+    &__holder {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 3rem;
+      position: relative;
+
+      img {
+        width: 10%;
+        height: auto;
+        margin: 0 auto;
+      }
+
+      &--content {
+        h2 {
+          padding: 1rem 0;
+        }
+        p {
+          font-size: 1.2rem;
+        }
+      }
+      &--content:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .team {
+    margin-bottom: 5rem;
+    justify-content: space-between;
+    background: #f3f3f3;
+    &__heading {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      h1 {
+        font-family: bwod-light;
+        font-weight: 700;
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+        padding-top: 3rem;
+      }
+      p {
+        text-align: center;
+        font-size: 1.2rem;
+      }
+    }
+
+    &__holder {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 3rem;
+
+      img {
+        width: 10%;
+        height: auto;
+        margin: 0 auto;
+      }
+
+      &--content {
+        background: #ffffff;
+        text-align: center;
+        h2 {
+          padding: 1rem 0;
+        }
+        p {
+          font-size: 1.2rem;
+        }
+      }
+      &--content:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+// ================== end of main ======================
+
+.row-sizing {
+  padding: 0 6rem;
+}
+
+.btn {
+  padding: 12px 25px;
+  border: none;
+  text-align: center;
+  color: $primary-color;
+  font-family: bwod-light;
+  position: relative;
+  background-color: transparent;
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    background-color: $primary-color;
+    color: #fff;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 97%;
+    height: 15px;
+    border: 2px solid $primary-color;
+    border-bottom: none;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: 0;
+    width: 97%;
+    height: 15px;
+    border: 2px solid $primary-color;
+    border-top: none;
+  }
+}
