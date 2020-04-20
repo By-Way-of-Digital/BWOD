@@ -301,6 +301,8 @@ main .team__holder--content {
   background: #ffffff;
   text-align: center;
   border-radius: 10px;
+  -webkit-box-shadow: 2px 4px 4px grey;
+          box-shadow: 2px 4px 4px grey;
 }
 
 main .team__holder--content h2 {
