@@ -1,10 +1,45 @@
 @mixin custom-underline {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 8%;
+  bottom: -5px;
+  right: 45%;
+  width: 10%;
   height: 4px;
   background-color: $primary-color;
   border-radius: 2px;
 }
+
+@mixin left-underline {
+  content: "";
+  position: absolute;
+  top: 34%;
+  left: 0;
+  width: 20%;
+  height: 4px;
+  background-color: $primary-color;
+  border-radius: 2px;
+}
+
+
+@mixin team-underline {
+  content: "";
+  position: absolute;
+  top: 60%;
+  right: 45%;
+  width: 10%;
+  height: 4px;
+  background-color: $primary-color;
+  border-radius: 2px;
+}
+
+@mixin client-underline {
+  content: "";
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 20%;
+  height: 4px;
+  background-color: $primary-color;
+  border-radius: 2px;
+}
+
