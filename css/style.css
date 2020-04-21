@@ -56,9 +56,9 @@ a {
 .left-underline::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 8%;
+  bottom: -5px;
+  right: 45%;
+  width: 10%;
   height: 4px;
   background-color: #ef6f21;
   border-radius: 2px;
@@ -72,9 +72,9 @@ a {
 .middle_underline::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 8%;
+  bottom: -5px;
+  right: 45%;
+  width: 10%;
   height: 4px;
   background-color: #ef6f21;
   border-radius: 2px;
@@ -88,6 +88,11 @@ header {
       grid-template-columns: repeat(2, 1fr);
   padding: 15px;
   background-color: #f2f2f2;
+  padding-left: 6rem;
+}
+
+header .header__logo {
+  width: 80px;
 }
 
 header .header__logo img {
@@ -150,6 +155,7 @@ main .service {
 
 main .service__heading {
   text-align: center;
+  position: relative;
 }
 
 main .service__heading h1 {
@@ -157,6 +163,17 @@ main .service__heading h1 {
   font-weight: 700;
   font-size: 3rem;
   margin-bottom: 2.5rem;
+}
+
+main .service__heading::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: 45%;
+  width: 10%;
+  height: 4px;
+  background-color: #ef6f21;
+  border-radius: 2px;
 }
 
 main .service__holder {
@@ -197,6 +214,18 @@ main .hack {
 
 main .hack .hack__text {
   margin-top: 2rem;
+  position: relative;
+}
+
+main .hack .hack__text::after {
+  content: "";
+  position: absolute;
+  top: 34%;
+  left: 0;
+  width: 20%;
+  height: 4px;
+  background-color: #ef6f21;
+  border-radius: 2px;
 }
 
 main .hack .hack__text h1 {
@@ -234,6 +263,18 @@ main .promise {
 main .promise__heading {
   text-align: center;
   padding-top: 2rem;
+  position: relative;
+}
+
+main .promise__heading::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: 45%;
+  width: 10%;
+  height: 4px;
+  background-color: #ef6f21;
+  border-radius: 2px;
 }
 
 main .promise__heading h1 {
@@ -272,13 +313,25 @@ main .team {
 main .team__heading {
   text-align: center;
   margin-bottom: 3rem;
+  position: relative;
+}
+
+main .team__heading::after {
+  content: "";
+  position: absolute;
+  top: 60%;
+  right: 45%;
+  width: 10%;
+  height: 4px;
+  background-color: #ef6f21;
+  border-radius: 2px;
 }
 
 main .team__heading h1 {
   font-family: bwod-light;
   font-weight: 700;
   font-size: 3rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
   padding-top: 3rem;
 }
 
@@ -337,6 +390,18 @@ main .clientele {
 
 main .clientele .clientele__text {
   margin-top: 2rem;
+  position: relative;
+}
+
+main .clientele .clientele__text::after {
+  content: "";
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 20%;
+  height: 4px;
+  background-color: #ef6f21;
+  border-radius: 2px;
 }
 
 main .clientele .clientele__text h1 {
