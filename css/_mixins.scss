@@ -5,9 +5,12 @@
   right: 45%;
   width: 10%;
   height: 4px;
-  background-color: $primary-color;
+  background-color: #F2994A;
   border-radius: 2px;
 }
+
+
+
 
 @mixin left-underline {
   content: "";
@@ -16,21 +19,10 @@
   left: 0;
   width: 20%;
   height: 4px;
-  background-color: $primary-color;
+  background-color: #F2994A;
   border-radius: 2px;
 }
 
-
-@mixin team-underline {
-  content: "";
-  position: absolute;
-  top: 60%;
-  right: 45%;
-  width: 10%;
-  height: 4px;
-  background-color: $primary-color;
-  border-radius: 2px;
-}
 
 @mixin client-underline {
   content: "";
@@ -39,7 +31,19 @@
   left: 0;
   width: 20%;
   height: 4px;
-  background-color: $primary-color;
+  background-color: #F2994A;
+  border-radius: 2px;
+}
+
+
+@mixin testimonial-underline {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left:40%;
+  width: 20%;
+  height: 4px;
+  background-color: #F2994A;
   border-radius: 2px;
 }
 
