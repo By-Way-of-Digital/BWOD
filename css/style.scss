@@ -416,7 +416,7 @@ main {
             }
 
             &-text {
-                padding: 3rem 4rem;
+                padding: 2rem 4rem;
             }
 
             &-circle {
@@ -427,13 +427,18 @@ main {
             }
 
             &-circle>div {
-
+                margin-top: 2rem;
                 width: 10px;
                 height: 10px;
                 border-radius: 50%;
                 // background: linear-gradient( right $primary-color, #c75209)
                 background: orangered;
                 justify-content: center;
+            }
+
+            &-name {
+                padding: 1rem 0 2.5rem 0 ;
+                
             }
         }
 
