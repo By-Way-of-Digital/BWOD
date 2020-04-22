@@ -422,7 +422,7 @@ main .testimonial__holder-icon::after {
 }
 
 main .testimonial__holder-text {
-  padding: 3rem 4rem;
+  padding: 2rem 4rem;
 }
 
 main .testimonial__holder-circle {
@@ -437,6 +437,7 @@ main .testimonial__holder-circle {
 }
 
 main .testimonial__holder-circle > div {
+  margin-top: 2rem;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -444,6 +445,10 @@ main .testimonial__holder-circle > div {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+main .testimonial__holder-name {
+  padding: 1rem 0 2.5rem 0;
 }
 
 main .resources {
