@@ -49,38 +49,6 @@ a {
   font-family: bwod-light;
 }
 
-.left-underline {
-  position: relative;
-}
-
-.left-underline::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  right: 45%;
-  width: 10%;
-  height: 4px;
-  background-color: #ef6f21;
-  border-radius: 2px;
-}
-
-.middle_underline {
-  position: relative;
-  text-align: center;
-}
-
-.middle_underline::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  right: 45%;
-  width: 10%;
-  height: 4px;
-  background-color: #ef6f21;
-  border-radius: 2px;
-  left: 40%;
-}
-
 header {
   display: -ms-grid;
   display: grid;
@@ -151,38 +119,43 @@ main .service {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
 }
 
-main .service__heading {
-  text-align: center;
-  position: relative;
+main .service__image {
+  margin-top: 5rem;
 }
 
-main .service__heading h1 {
+main .service__image img {
+  width: 100%;
+}
+
+main .service__holder-heading {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+main .service__holder-heading h1 {
   font-family: bwod-light;
   font-weight: 700;
   font-size: 3rem;
   margin-bottom: 2.5rem;
+  position: relative;
 }
 
-main .service__heading::after {
+main .service__holder-heading h1::after {
   content: "";
   position: absolute;
-  bottom: -5px;
-  right: 45%;
-  width: 10%;
+  top: 80px;
+  left: 0;
+  width: 20%;
   height: 4px;
-  background-color: #ef6f21;
+  background-color: #F2994A;
   border-radius: 2px;
-}
-
-main .service__holder {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  grid-gap: 3rem;
-  position: relative;
 }
 
 main .service__holder img {
@@ -224,7 +197,7 @@ main .hack .hack__text::after {
   left: 0;
   width: 20%;
   height: 4px;
-  background-color: #ef6f21;
+  background-color: #F2994A;
   border-radius: 2px;
 }
 
@@ -263,18 +236,6 @@ main .promise {
 main .promise__heading {
   text-align: center;
   padding-top: 2rem;
-  position: relative;
-}
-
-main .promise__heading::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  right: 45%;
-  width: 10%;
-  height: 4px;
-  background-color: #ef6f21;
-  border-radius: 2px;
 }
 
 main .promise__heading h1 {
@@ -282,6 +243,18 @@ main .promise__heading h1 {
   font-weight: 700;
   font-size: 3rem;
   margin-bottom: 2.5rem;
+  position: relative;
+}
+
+main .promise__heading h1::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: 45%;
+  width: 10%;
+  height: 4px;
+  background-color: #F2994A;
+  border-radius: 2px;
 }
 
 main .promise__holder img {
@@ -313,18 +286,6 @@ main .team {
 main .team__heading {
   text-align: center;
   margin-bottom: 3rem;
-  position: relative;
-}
-
-main .team__heading::after {
-  content: "";
-  position: absolute;
-  top: 60%;
-  right: 45%;
-  width: 10%;
-  height: 4px;
-  background-color: #ef6f21;
-  border-radius: 2px;
 }
 
 main .team__heading h1 {
@@ -333,6 +294,18 @@ main .team__heading h1 {
   font-size: 3rem;
   margin-bottom: 2rem;
   padding-top: 3rem;
+  position: relative;
+}
+
+main .team__heading h1::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: 45%;
+  width: 10%;
+  height: 4px;
+  background-color: #F2994A;
+  border-radius: 2px;
 }
 
 main .team__heading p {
@@ -385,23 +358,10 @@ main .clientele {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  margin: 6rem 0;
 }
 
 main .clientele .clientele__text {
   margin-top: 2rem;
-  position: relative;
-}
-
-main .clientele .clientele__text::after {
-  content: "";
-  position: absolute;
-  top: 80px;
-  left: 0;
-  width: 20%;
-  height: 4px;
-  background-color: #ef6f21;
-  border-radius: 2px;
 }
 
 main .clientele .clientele__text h1 {
@@ -409,6 +369,18 @@ main .clientele .clientele__text h1 {
   font-weight: 700;
   font-size: 3rem;
   line-height: 4.5rem;
+  position: relative;
+}
+
+main .clientele .clientele__text h1::after {
+  content: "";
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 20%;
+  height: 4px;
+  background-color: #F2994A;
+  border-radius: 2px;
 }
 
 main .clientele .clientele__text p {
@@ -421,11 +393,191 @@ main .clientele .clientele__image img {
   height: auto;
 }
 
-.row-sizing {
+main .testimonial {
+  background: #F7F8F8;
+  margin: 0 auto;
+}
+
+main .testimonial__holder {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+main .testimonial__holder-icon {
+  padding-top: 3rem;
+  position: relative;
+}
+
+main .testimonial__holder-icon::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 40%;
+  width: 20%;
+  height: 4px;
+  background-color: #F2994A;
+  border-radius: 2px;
+}
+
+main .testimonial__holder-text {
+  padding: 3rem 4rem;
+}
+
+main .testimonial__holder-circle {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (10px)[3];
+      grid-template-columns: repeat(3, 10px);
+  grid-gap: 5px;
+}
+
+main .testimonial__holder-circle > div {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: orangered;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .resources {
+  margin-bottom: 5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .resources__heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+main .resources__heading h1 {
+  font-family: bwod-light;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 5rem;
+  padding-top: 3rem;
+  position: relative;
+}
+
+main .resources__heading h1::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: 45%;
+  width: 10%;
+  height: 4px;
+  background-color: #F2994A;
+  border-radius: 2px;
+}
+
+main .resources__holder {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4rem;
+  border-radius: 10px;
+}
+
+main .resources__holder--content {
+  background: #ffffff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 2px 4px grey;
+          box-shadow: 0px 2px 4px grey;
+}
+
+main .resources__holder--content-image {
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+
+main .resources__holder--content-image img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+main .resources__holder--content-text {
+  padding: 10px;
+}
+
+main .resources__holder--content-text h4 {
+  text-transform: uppercase;
+}
+
+main .resources__holder--content-text p {
+  font-size: 1rem;
+  padding: 1rem 0;
+}
+
+main .resources__holder--content-text a {
+  text-decoration: none;
+  color: #ef6f21;
+  border-bottom: 1px solid #ef6f21;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  padding: 3px;
+}
+
+main .resources__holder--content-text a:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  color: #ffffff;
+  background: #ef6f21;
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+main .newsletter {
+  background: #4F4B6A;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: 1rem;
+      grid-template-rows: 1rem;
+  padding: 3rem 0;
+}
+
+main .newsletter__menu {
+  place-items: left;
+  padding: 3rem 0;
+}
+
+main .newsletter__menu-link {
+  color: #4f4b6a;
+  padding: 0 10px;
+  text-decoration: none;
+  color: white;
+}
+
+main .newsletter__letter {
+  color: #ffffff;
+  place-items: center;
+  padding: 3rem 0;
+}
+
+main .newsletter__letter p {
+  color: white;
+}
+
+main .newsletter hr {
+  border: 2px solid #ef6f21;
+}
+
+main .row-sizing {
   padding: 0 6rem;
 }
 
-.btn {
+main .btn {
   padding: 12px 25px;
   border: none;
   text-align: center;
@@ -437,12 +589,12 @@ main .clientele .clientele__image img {
   transition: all 0.4s ease-in-out;
 }
 
-.btn:hover {
+main .btn:hover {
   background-color: #ef6f21;
   color: #fff;
 }
 
-.btn::after {
+main .btn::after {
   position: absolute;
   content: "";
   top: 0;
@@ -453,7 +605,7 @@ main .clientele .clientele__image img {
   border-bottom: none;
 }
 
-.btn::before {
+main .btn::before {
   position: absolute;
   content: "";
   bottom: 0;

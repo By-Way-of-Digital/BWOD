@@ -26,15 +26,15 @@ $text-color: #4f4b6a;
     height: 6px !important;
     background: transparent;
 }
- 
+
 ::-webkit-scrollbar-thumb {
     background: $primary-color;
     border-radius: 20px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(0,0,0,.3);
-    
+    background: rgba(0, 0, 0, .3);
+
 }
 
 
@@ -59,24 +59,6 @@ a {
     font-family: bwod-light;
 }
 
-// Customized Heading
-.left-underline {
-    position: relative;
-
-    &::after {
-        @include custom-underline;
-    }
-}
-
-.middle_underline {
-    position: relative;
-    text-align: center;
-
-    &::after {
-        @include custom-underline;
-        left: 40%;
-    }
-}
 
 // ===================== Header ============================
 
@@ -89,6 +71,7 @@ header {
 
     .header__logo {
         width: 80px;
+
         img {
             width: 100%;
             height: auto;
@@ -148,28 +131,43 @@ main {
     .service {
         margin-bottom: 5rem;
         justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
 
-        &__heading {
-            text-align: center;
-            position: relative;
+        &__image {
+            margin-top: 5rem;
 
-            h1 {
-                font-family: bwod-light;
-                font-weight: 700;
-                font-size: 3rem;
-                margin-bottom: 2.5rem;
+            img {
+                width: 100%;
             }
 
-            &::after {
-                @include custom-underline;
-            }
         }
 
+
         &__holder {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 3rem;
-            position: relative;
+
+            &-heading {
+                text-align: left;
+
+                margin-bottom: 3rem;
+
+
+                h1 {
+                    font-family: bwod-light;
+                    font-weight: 700;
+                    font-size: 3rem;
+                    margin-bottom: 2.5rem;
+                    position: relative;
+
+
+                    &::after {
+                        @include client-underline;
+                    }
+                }
+            }
+
+
 
             img {
                 width: 10%;
@@ -244,17 +242,19 @@ main {
         &__heading {
             text-align: center;
             padding-top: 2rem;
-            position: relative;
 
-            &::after {
-                @include custom-underline;
-            }
 
             h1 {
                 font-family: bwod-light;
                 font-weight: 700;
                 font-size: 3rem;
                 margin-bottom: 2.5rem;
+
+                position: relative;
+
+                &::after {
+                    @include custom-underline;
+                }
             }
         }
 
@@ -286,17 +286,13 @@ main {
         margin-bottom: 5rem;
         justify-content: space-between;
         background: #F7F8F8;
-      
+
 
 
         &__heading {
             text-align: center;
             margin-bottom: 3rem;
-            position: relative;
 
-            &::after {
-                @include team-underline;
-            }
 
 
             h1 {
@@ -305,6 +301,12 @@ main {
                 font-size: 3rem;
                 margin-bottom: 2rem;
                 padding-top: 3rem;
+
+                position: relative;
+
+                &::after {
+                    @include custom-underline;
+                }
             }
 
             p {
@@ -328,6 +330,7 @@ main {
                 border-radius: 10px;
 
                 box-shadow: 2px 4px 4px grey;
+
                 h2 {
                     padding: 1rem 0;
                 }
@@ -336,10 +339,11 @@ main {
                     font-size: 1.2rem;
                 }
 
-                &-circle { // not working, will look into it
+                &-circle {
+                    // not working, will look into it
                     width: 100px;
                     height: 100px;
-                    background: red; 
+                    background: red;
                     border-radius: 50%;
                     margin: 0 auto;
 
@@ -357,21 +361,21 @@ main {
     .clientele {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin: 6rem 0;
 
         .clientele__text {
             margin-top: 2rem;
-            position: relative;
-
-            &::after {
-                @include client-underline;
-            }
 
             h1 {
                 font-family: bwod-light;
                 font-weight: 700;
                 font-size: 3rem;
                 line-height: 4.5rem;
+                position: relative;
+
+                &::after {
+                    @include client-underline;
+                }
+
             }
 
             p {
@@ -388,9 +392,193 @@ main {
             }
         }
     }
+
+    .testimonial {
+        background: #F7F8F8;
+        margin: 0 auto;
+
+
+        &__holder {
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+
+            &-icon {
+
+                padding-top: 3rem;
+                position: relative;
+
+                &::after {
+                    @include testimonial-underline;
+                }
+
+            }
+
+            &-text {
+                padding: 3rem 4rem;
+            }
+
+            &-circle {
+                display: grid;
+                justify-content: center;
+                grid-template-columns: repeat(3, 10px);
+                grid-gap: 5px;
+            }
+
+            &-circle>div {
+
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                // background: linear-gradient( right $primary-color, #c75209)
+                background: orangered;
+                justify-content: center;
+            }
+        }
+
+
+
+    }
+
+    .resources {
+        margin-bottom: 5rem;
+        justify-content: space-between;
+        
+        &__heading {
+            text-align: center;
+            margin-bottom: 3rem;
+
+            h1 {
+                font-family: bwod-light;
+                font-weight: 700;
+                font-size: 3rem;
+                margin-bottom: 5rem;
+                padding-top: 3rem;
+                position: relative;
+
+                &::after {
+                    @include custom-underline;
+                }
+            }
+
+
+        }
+
+        &__holder {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 4rem;
+            border-radius: 10px;
+
+
+
+            &--content {
+                background: #ffffff;
+                border-radius: 10px;
+                
+                box-shadow: 0px 2px 4px grey;               
+
+                &-image {
+                    // not working, will look into it
+                    border-radius: 10px 10px 0 0;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        margin: 0 auto;
+                    }
+                }
+
+                &-text {
+                    padding: 10px;
+
+                    h4 {
+                        text-transform: uppercase;
+
+                    }
+
+                    p {
+                        font-size: 1rem;
+                        padding: 1rem 0;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: $primary-color;
+                        border-bottom: 1px solid $primary-color;
+                        transition: all .3s ease-in-out;
+                        padding: 3px;
+                        
+
+                        &:hover {
+                            transform: translateY(-2px);
+                            color: #ffffff;
+                            background: $primary-color;
+                            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+                            
+                        }
+                        
+                        
+                        
+                    }
+
+                }
+            }
+
+        }
+    }
+
+
+
+    
+
+.newsletter {
+    background: #4F4B6A;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1rem;
+    padding: 3rem 0;
+
+    &__menu {
+        
+       place-items: left;
+       padding: 3rem 0;
+
+        &-link {
+            color: $text-color;
+            padding: 0 10px;
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+    &__letter {
+        color: #ffffff;
+        place-items: center;
+        padding: 3rem 0;
+
+        p { 
+            color: white;
+        }
+
+    }
+
+    hr {
+        border: 2px solid $primary-color
+        
+    }
 }
 
 // ================== end of main ======================
+
+
+
+
+
+
+// ==================UTILITIES======================
 
 .row-sizing {
     padding: 0 6rem;
@@ -432,4 +620,5 @@ main {
         border: 2px solid $primary-color;
         border-top: none;
     }
+}
 }
