@@ -336,7 +336,7 @@ main .team__holder--content h2 {
 }
 
 main .team__holder--content p {
-  font-size: 1.2rem;
+  padding-bottom: 1rem;
 }
 
 main .team__holder--content-circle {
@@ -344,13 +344,13 @@ main .team__holder--content-circle {
   height: 100px;
   background: red;
   border-radius: 50%;
-  margin: 0 auto;
+  margin-top: 5px;
 }
 
 main .team__holder--content-circle img {
   width: 10%;
   height: auto;
-  margin: 0 auto;
+  margin-top: 5px;
 }
 
 main .clientele {
@@ -592,6 +592,7 @@ main .btn {
   background-color: transparent;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+  cursor: pointer;
 }
 
 main .btn:hover {
@@ -619,5 +620,11 @@ main .btn::before {
   height: 15px;
   border: 2px solid #ef6f21;
   border-top: none;
+}
+
+.addScroll {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50px;
 }
 /*# sourceMappingURL=style.css.map */
