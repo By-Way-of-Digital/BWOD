@@ -86,6 +86,7 @@ header {
             color: $text-color;
             padding: 0 10px;
             text-decoration: none;
+            
         }
     }
 }
@@ -93,6 +94,7 @@ header {
 // ===================== main content ========================
 
 main {
+
     .intro {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -134,6 +136,7 @@ main {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 2rem;
+        
 
         &__image {
             margin-top: 5rem;
@@ -336,7 +339,7 @@ main {
                 }
 
                 p {
-                    font-size: 1.2rem;
+                    padding-bottom: 1rem;
                 }
 
                 &-circle {
@@ -345,12 +348,12 @@ main {
                     height: 100px;
                     background: red;
                     border-radius: 50%;
-                    margin: 0 auto;
+                    margin-top: 5px;
 
                     img {
                         width: 10%;
                         height: auto;
-                        margin: 0 auto;
+                        margin-top: 5px;
                     }
                 }
             }
@@ -535,46 +538,42 @@ main {
         }
     }
 
-
-
-    
-
-.newsletter {
-    background: #4F4B6A;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1rem;
-    padding: 3rem 0;
-
-    &__menu {
-        
-       place-items: left;
-       padding: 3rem 0;
-
-        &-link {
-            color: $text-color;
-            padding: 0 10px;
-            text-decoration: none;
-            color: white;
-        }
-    }
-
-    &__letter {
-        color: #ffffff;
-        place-items: center;
+    .newsletter {
+        background: #4F4B6A;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1rem;
         padding: 3rem 0;
 
-        p { 
-            color: white;
+        &__menu {
+            
+        place-items: left;
+        padding: 3rem 0;
+
+            &-link {
+                color: $text-color;
+                padding: 0 10px;
+                text-decoration: none;
+                color: white;
+            }
         }
 
-    }
+        &__letter {
+            color: #ffffff;
+            place-items: center;
+            padding: 3rem 0;
 
-    hr {
-        border: 2px solid $primary-color
-        
+            p { 
+                color: white;
+            }
+
+        }
+
+        hr {
+            border: 2px solid $primary-color
+            
+        }
     }
-}
 
 // ================== end of main ======================
 
@@ -585,45 +584,56 @@ main {
 
 // ==================UTILITIES======================
 
-.row-sizing {
-    padding: 0 6rem;
+    .row-sizing {
+        padding: 0 6rem;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        border: none;
+        text-align: center;
+        color: $primary-color;
+        font-family: bwod-light;
+        position: relative;
+        background-color: transparent;
+        transition: all 0.4s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $primary-color;
+            color: #fff;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 97%;
+            height: 15px;
+            border: 2px solid $primary-color;
+            border-bottom: none;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            right: 0;
+            width: 97%;
+            height: 15px;
+            border: 2px solid $primary-color;
+            border-top: none;
+        }
+    }
+
+
 }
 
-.btn {
-    padding: 12px 25px;
-    border: none;
-    text-align: center;
-    color: $primary-color;
-    font-family: bwod-light;
-    position: relative;
-    background-color: transparent;
-    transition: all 0.4s ease-in-out;
 
-    &:hover {
-        background-color: $primary-color;
-        color: #fff;
-    }
+.addScroll {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50px;
 
-    &::after {
-        position: absolute;
-        content: "";
-        top: 0;
-        left: 0;
-        width: 97%;
-        height: 15px;
-        border: 2px solid $primary-color;
-        border-bottom: none;
-    }
-
-    &::before {
-        position: absolute;
-        content: "";
-        bottom: 0;
-        right: 0;
-        width: 97%;
-        height: 15px;
-        border: 2px solid $primary-color;
-        border-top: none;
-    }
-}
 }
