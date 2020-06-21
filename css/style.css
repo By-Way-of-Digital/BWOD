@@ -431,6 +431,7 @@ main .hire .hire__text h1 {
   font-weight: 700;
   font-size: 3rem;
   line-height: 4.5rem;
+  position: relative;
 }
 
 main .hire .hire__text h1::after {
