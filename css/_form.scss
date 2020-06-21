@@ -1,0 +1,36 @@
+.form {
+   
+
+    &-group:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &-control { 
+        width: 80%;
+        border: none;
+        background-color: rgba(250, 250, 250, .5);
+        border-bottom: 3px solid transparent;
+        padding: .8rem;
+        font-family: bwod-light;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba(0,0,0, .1);
+            border-bottom: 3px solid $primary-color;
+            
+        }
+        
+        &:focus:invalid {
+            border-bottom: 3px solid #55c57a;
+        }
+
+    }
+
+    .btn__form {
+        background-color: $primary-color;
+        padding: .8rem 1rem;
+        border-radius: .5rem;
+        border: none;
+        color: white;
+    }
+}
