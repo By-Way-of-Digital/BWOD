@@ -181,7 +181,7 @@ main {
 
 
                     &::after {
-                        @include client-underline;
+                        @include service-underline;
                     }
                 }
             }
@@ -295,7 +295,10 @@ main {
         &__heading {
             text-align: center;
             padding-top: 2rem;
-
+            
+            p {
+                font-size: 1.2rem;
+            }
 
             h1 {
                 font-family: bwod-light;
@@ -309,27 +312,18 @@ main {
                     @include custom-underline;
                 }
             }
+
+           
         }
 
         &__holder {
             padding: 2rem 2rem;
 
             img {
-                width: 90%;
+                width: 100%;
                 height: auto;
                 margin: 0 auto;
-            }
-
-            &--content {
-                h2 {
-                    padding: 1rem 0;
-                }
-
-                
-            }
-
-            &--content:not(:last-child) {
-                margin-bottom: 2rem;
+                place-items: center;
             }
         }
     }
@@ -433,6 +427,7 @@ main {
         &__holder {
            
             display: grid;
+            place-items: center;
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 2.5rem;
             padding: 3rem 0;
