@@ -20,7 +20,7 @@
             
         }
         
-        &:focus:invalid {
+        &:focus:valid {
             border-bottom: 3px solid #55c57a;
         }
 

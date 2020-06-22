@@ -34,7 +34,7 @@
   border-bottom: 3px solid #ef6f21;
 }
 
-.form-control:focus:invalid {
+.form-control:focus:valid {
   border-bottom: 3px solid #55c57a;
 }
 
