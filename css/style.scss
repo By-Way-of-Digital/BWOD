@@ -75,8 +75,7 @@ header {
         width: 80px;
 
         img {
-            width: 100%;
-            height: auto;
+           height: 35px;
         }
     }
 
@@ -104,6 +103,8 @@ header {
             color: white;
             padding: .5rem .5rem;
         }
+
+        
     }
 }
 
@@ -177,12 +178,7 @@ main {
                     font-weight: 700;
                     font-size: 3rem;
                     margin-bottom: 2.5rem;
-                    position: relative;
-
-
-                    &::after {
-                        @include service-underline;
-                    }
+                    
                 }
             }
 
@@ -252,11 +248,7 @@ main {
 
         .hack__text {
             margin-top: 2rem;
-            position: relative;
-
-            &::after {
-                @include left-underline;
-            }
+            
 
             h1 {
                 font-family: bwod-light;
@@ -334,50 +326,40 @@ main {
         background: $bg-color;
         margin: 0 auto;
 
-
-        &__holder {
+        &__holder-icon {
             width: 50%;
             margin: 0 auto;
             text-align: center;
             position: relative;
+            padding-top: 3rem;
+            position: relative;
 
-            &-icon {
-
-                padding-top: 3rem;
-                position: relative;
-
-                &::after {
-                    @include testimonial-underline;
-                }
-
+            &::after {
+                @include testimonial-underline;
             }
+
+        }
+
+
+        &__holder {
+            width: 70%;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
 
             &-text {
-                padding: 2rem 4rem;
+                padding: 3.5rem 4rem;
             }
 
-            &-circle {
-                display: grid;
-                justify-content: center;
-                grid-template-columns: repeat(3, 10px);
-                grid-gap: 5px;
-            }
-
-            &-circle>div {
-                margin-top: 2rem;
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                // background: linear-gradient( right $primary-color, #c75209)
-                background: orangered;
-                justify-content: center;
-            }
+            
 
             &-name {
                 padding: 1rem 0 2.5rem 0 ;
                 
             }
         }
+
+     
 
 
 
@@ -426,10 +408,9 @@ main {
 
         &__holder {
            
-            display: grid;
-            place-items: center;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 2.5rem;
+            display: flex;
+           flex-direction: row;
+           justify-content: space-around;
             padding: 3rem 0;
             
     
@@ -571,4 +552,26 @@ main {
     position: sticky;
     top: 50px;
 
+}
+
+
+.slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 45px !important;
+    line-height: 0;
+    opacity: .75 ;
+    color: $primary-color !important;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+.slick-dots {
+    position: absolute;
+    bottom: 18px !important;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
 }
