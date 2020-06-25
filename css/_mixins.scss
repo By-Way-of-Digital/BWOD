@@ -12,6 +12,18 @@
 
 
 
+@mixin hack-underline {
+  content: "";
+  position: absolute;
+  top: 43%;
+  left: 0;
+  width: 20%;
+  height: 4px;
+  background-color: #F2994A;
+  border-radius: 2px;
+}
+
+
 @mixin left-underline {
   content: "";
   position: absolute;
@@ -24,16 +36,9 @@
 }
 
 
-@mixin service-underline {
-  content: "";
-  position: absolute;
-  top: 140px;
-  left: 0;
-  width: 20%;
-  height: 4px;
-  background-color: #F2994A;
-  border-radius: 2px;
-}
+
+
+
 @mixin client-underline {
   content: "";
   position: absolute;

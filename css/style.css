@@ -97,8 +97,7 @@ header .header__logo {
 }
 
 header .header__logo img {
-  width: 100%;
-  height: auto;
+  height: 35px;
 }
 
 header .header__menu {
@@ -194,18 +193,6 @@ main .service__holder-heading h1 {
   font-weight: 700;
   font-size: 3rem;
   margin-bottom: 2.5rem;
-  position: relative;
-}
-
-main .service__holder-heading h1::after {
-  content: "";
-  position: absolute;
-  top: 140px;
-  left: 0;
-  width: 20%;
-  height: 4px;
-  background-color: #F2994A;
-  border-radius: 2px;
 }
 
 main .service__holder img {
@@ -267,18 +254,6 @@ main .hack {
 
 main .hack .hack__text {
   margin-top: 2rem;
-  position: relative;
-}
-
-main .hack .hack__text::after {
-  content: "";
-  position: absolute;
-  top: 34%;
-  left: 0;
-  width: 20%;
-  height: 4px;
-  background-color: #F2994A;
-  border-radius: 2px;
 }
 
 main .hack .hack__text h1 {
@@ -357,14 +332,11 @@ main .testimonial {
   margin: 0 auto;
 }
 
-main .testimonial__holder {
+main .testimonial__holder-icon {
   width: 50%;
   margin: 0 auto;
   text-align: center;
   position: relative;
-}
-
-main .testimonial__holder-icon {
   padding-top: 3rem;
   position: relative;
 }
@@ -380,30 +352,15 @@ main .testimonial__holder-icon::after {
   border-radius: 2px;
 }
 
+main .testimonial__holder {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
 main .testimonial__holder-text {
-  padding: 2rem 4rem;
-}
-
-main .testimonial__holder-circle {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-grid-columns: (10px)[3];
-      grid-template-columns: repeat(3, 10px);
-  grid-gap: 5px;
-}
-
-main .testimonial__holder-circle > div {
-  margin-top: 2rem;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: orangered;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding: 3.5rem 4rem;
 }
 
 main .testimonial__holder-name {
@@ -458,12 +415,15 @@ main .footer {
 }
 
 main .footer__holder {
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 3rem 0;
 }
 
@@ -563,5 +523,25 @@ main .btn::before {
   position: -webkit-sticky;
   position: sticky;
   top: 50px;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-family: 'slick';
+  font-size: 45px !important;
+  line-height: 0;
+  opacity: .75;
+  color: #ef6f21 !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 18px !important;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
 }
 /*# sourceMappingURL=style.css.map */
